@@ -4,7 +4,7 @@ Logger logger = StaticLoggerBinder.getSingleton().getLoggerFactory().getLogger(n
 where name is a string to identify an instance of the logger.
 Useful tips:
 1.	If you wish to avoid writing messages to a ring buffer completely (messages will go directly to the specified output file) then just call 
-logger.serRing(null);
+logger.setRing(null);
 2.	If you wish to handle the log messages by yourself after they are extracted from the ring buffer then provide the RingBufferLoggerMessageConsumer myConsumer, and set it in the logger: 
 logger.setConsumer(myConsumer);
 3.	If you wish to use your own ring buffer to store and retrieve log messages, then create your own ring and be responsible for it:
